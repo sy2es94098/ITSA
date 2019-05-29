@@ -34,9 +34,8 @@ int main(){
                 }
         }
     }
-    cout << summer << endl << non <<endl;
+    cout << "Summer months:" << summer << endl << "Non-Summer months:" << non <<endl;
 }
-
 
 
 
