@@ -34,7 +34,7 @@ int main(){
         data[i] = a + b ;
     }
     if(data[9] % 11 == 0)
-        cout << "YES";
+        cout << "YES" << endl;
     else
         cout << "NO" << endl;
     return 0;
