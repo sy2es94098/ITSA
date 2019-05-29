@@ -28,8 +28,6 @@ int main(){
             if(asc > 57)
                 asc -= 10 ;
         }
-        else
-            cout << str[i];
     done = (char)asc;
     cout << done;
 
