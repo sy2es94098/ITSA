@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cstdlib>
+#include<iomanip>
 using namespace std;
 int main(){
     float degree, summer, non;
@@ -34,7 +35,7 @@ int main(){
                 }
         }
     }
-    cout << "Summer months:" << summer << endl << "Non-Summer months:" << non <<endl;
+    cout << fixed << setprecision(2) << "Summer months:" << summer << endl << "Non-Summer months:" << non <<endl;
 }
 
 
