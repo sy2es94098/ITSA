@@ -14,7 +14,7 @@ int main(){
             if(str[i] == ' ')
                 space++;
         }
-        int num = 0, sum = 0, tmp = 0, data[space] = {0};
+        int num = 0, count = 0, tmp = 0, data[space] = {0};
         stringstream ss;
         for( int i = 0 ; i < space ; i++){
             ss.clear();
@@ -22,22 +22,24 @@ int main(){
             ss >> data[i];
         }
         for( int i = 0 ; i < space ; i++){
-            for( int j = i ; j < space ; j++){
+            for( int j = 0 ; j < space ; j++){
                 if(data[i] == data[j])
                     tmp++;
             }
-            if(tmp > sum ){
-                sum = tmp;
-                num = data[i]; 
+            if(tmp > space/2 ){
+                cout << data[i] << endl;
+                count = 1;
+                break;
             }
             tmp = 0;
-        }
-        if( sum >= space/2)
-            cout << num << endl;
-        else
-            cout << "NO" << endl;
-    }
 
+        }
+        if(count == 0)
+        {
+            cout << "NO" << endl;
+            count = 0;
+        }
+    }
 }
 
 /*public static void main(String[] args) {
