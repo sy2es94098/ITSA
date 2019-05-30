@@ -1,56 +1,26 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int same, data[9], startR[3], startC[3], startD[2];
-    for( int i = 0 ; i < 9 ; i++)
+    int data[9], sumO, sumX;
+    for(int i = 0 ; i < 9 ; ++i)
         cin >> data[i];
-    for( int i = 0 ; i < 3 ; i++){
-        startR[i] = data[i];
-        startC[i] = data[i*3];
-    }
-    startD[0] = data[0];
-    startD[1] = data[2];
-    for( int i = 0 ; i < 3 ; i++){
-        same = 0 ;
-        for( int j = startC[i] ; j < 3 ; j++ ){
-            if( startC[i] == data[j] )
-                same++;
-            if( same == 3){
-                cout << "True";
-                return 0;
-            }
-        }
-        same = 0 ;
-        for( int j = startR[i] ; j < 9 ; j += 3){
-            same = 0;
-            if( startR[i] == data[j] )
-                same++;
-            if( same == 3){
-                cout << "True";
-                return 0;
-            }
-        }
-    }
-    same = 0;
-    for( int j = startD[0] ; j < 9 ; j += 4 ){
-        if( startD[0] == data[j] )
-            same++;
-        if( same == 3){
-            cout << "True";
-            return 0;
-        }
-    }
-    same = 0;
-    for( int j = startD[1] ; j < 7 ; j += 2 ){
-        if( startD[1] == data[j] )
-            same++;
-        if( same == 3){
-            cout << "True";
-            return 0;
-        }
-    }
-    cout << "False";
+    if(data[0] == data[1] && data[1] == data[2])
+        cout << "True" << endl;
+    else if(data[3] == data[4] && data[4] == data[5])
+        cout << "True" << endl;
+    else if(data[6] == data[7] && data[7] == data[8])
+        cout << "True" << endl;
+    else if(data[0] == data[3] && data[3] == data[6])
+        cout << "True" << endl;
+    else if(data[1] == data[4] && data[4] == data[7])
+        cout << "True" << endl;
+    else if(data[2] == data[5] && data[5] == data[8])
+        cout << "True" << endl;
+    else if(data[0] == data[4] && data[4] == data[8])
+        cout << "True" << endl;
+    else if(data[2] == data[4] && data[4] == data[6])
+        cout << "True" << endl;
+    else
+        cout << "False";
 }
-
-
 
