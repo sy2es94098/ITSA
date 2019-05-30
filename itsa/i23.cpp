@@ -16,7 +16,7 @@ int main(){
         return 0;
     }
     else{
-        money = 500 - ( a1 * 15 + a2 * 20 + a3 * 30 );
+        money = n - ( a1 * 15 + a2 * 20 + a3 * 30 );
         fif = (int)(money / 50);
         tmp = money % 50;
         five = (int)(tmp / 5);
