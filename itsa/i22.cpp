@@ -21,6 +21,6 @@ int main(){
     else if(data[2] == data[4] && data[4] == data[6])
         cout << "True" << endl;
     else
-        cout << "False";
+        cout << "False" << endl;
 }
 
