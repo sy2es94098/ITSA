@@ -22,8 +22,4 @@ int main(){
 
     str = str.assign(str,0,1);
      cout << str <<endl;
-    if( str == "A")
-        cout << "fuck" <<endl;
-
-
 }
